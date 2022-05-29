@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./font/Pretendard-Regular.otf") format("truetype");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        box-sizing: border-box;
+        height: 100vh;
+        width: 100wh;
+        font-family: "Pretendard";
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .image {
+        width: 35%;
+        height: 100%;
+        background-color: beige;
+        background-image: url("./image/Group\ 1365.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main {
+        width: 65%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #frm {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #frm > span {
+        color: #333333;
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+      .inputbox {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+      }
+
+      .inputbox input {
+        width: 400px;
+        height: 50px;
+        border: 1px solid #c4c4c4;
+        border-radius: 4px;
+        color: #333333;
+        text-indent: 40px;
+      }
+
+      .inputbox input:first-child {
+        margin-bottom: 10px;
+      }
+
+      .inputbox input::placeholder {
+        font-family: "Pretendard";
+        color: #c1c1c1;
+        font-style: normal;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+
+      #id {
+        background-image: url("./image/user.png");
+        background-position: 10px;
+        background-repeat: no-repeat;
+      }
+
+      #password {
+        background-image: url("./image/pw.png");
+        background-position: 10px;
+        background-repeat: no-repeat;
+      }
+
+      #loginbnt {
+        width: 400px;
+        height: 50px;
+        margin-bottom: 10px;
+        border: none;
+        background: #018fbf;
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: "Pretendard";
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="./image/Frame 1389.png" />
+      </div>
+      <div class="main">
+        <form id="frm" action="main">
+          <span>관리 시스템 로그인</span>
+
+          <!--아이디, 패스워드 -->
+          <div class="inputbox">
+            <input type="text" id="id" name="id" placeholder="username" />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="password"
+            />
+          </div>
+
+          <!-- 로그인버튼-->
+          <input type="submit" id="loginbnt" value="로그인" />
+
+          <!--체크박스 -->
+          <div class="checkbox">
+            <input type="checkbox" checked />
+            <span>로그인 유지</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
